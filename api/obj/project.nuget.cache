@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DPgbk1H+pRZdAzY5IeBfwYJEsKXoMJfL7+NOhYc1WsDgiOXq5IBUf7oEKH5gzdOrX+nJ26z6lnecZwH/qGSx8Q==",
+  "success": true,
+  "projectFilePath": "/home/callum/repos/optus-breach-demo/api/api.csproj",
+  "expectedPackageFiles": [
+    "/home/callum/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/callum/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/callum/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/callum/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/callum/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/callum/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
