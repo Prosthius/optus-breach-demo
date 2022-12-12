@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NMfyGdEETvLGjd3pobi341qoKgdf8dnYVCetgriXLbds0xB81aMdplLjvoPE22oToiyIzWOk2Furj9vfxiHcJw==",
+  "dgSpecHash": "+x4i6h5L2mBglNYUznBx77Cy+e3ZNaDGbowNK0YgV1hnWZQ7IWSnjvHEyAHre4vKiYJHw9/eig6h4FENzS47Hw==",
   "success": true,
   "projectFilePath": "/home/callum/repos/optus-breach-demo/api/api.csproj",
   "expectedPackageFiles": [
@@ -69,7 +69,6 @@
     "/home/callum/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "/home/callum/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/home/callum/.nuget/packages/system.runtime.caching/5.0.0/system.runtime.caching.5.0.0.nupkg.sha512",
-    "/home/callum/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/callum/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
     "/home/callum/.nuget/packages/system.security.cryptography.cng/5.0.0/system.security.cryptography.cng.5.0.0.nupkg.sha512",
     "/home/callum/.nuget/packages/system.security.cryptography.protecteddata/5.0.0/system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
