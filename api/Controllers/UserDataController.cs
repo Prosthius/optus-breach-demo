@@ -1,22 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Api.Models;
 
 namespace api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class DemoController : ControllerBase{
-    private readonly ILogger<DemoController> _logger;
-
-    public DemoController(ILogger<DemoController> logger)
-    {
-        _logger = logger;
-    }
-
+public class DemoController : ControllerBase
+{
     public UserData userData = new UserData();
 
-    [HttpGet(Name = "GetUserData")]
-    public UserData Get()
+    [HttpGet]
+    public IEnumerable<UserData> Get()
     {
-        return userData;
+        userData.createTestData();
+        return userData.userDataList;
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<UserData> Get(int id)
+    {
+        try
+        {
+            userData.createTestData();
+            int i = userData.userDataList.FindIndex(userData => userData.Id == id);
+            return userData.userDataList[i];
+        }
+        catch
+        {
+            return NotFound();
+        }
     }
 }
