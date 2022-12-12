@@ -1,4 +1,6 @@
 using Api.Data;
+using System.Data;
+using System.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSqlServer<ApiContext>("Data Source=Server=192.168.0.202; Database=optus-breach-demo; User Id=sa; Password=TEpBLb7GbqzEdSv@Hi4smY9TqP");
+var conStrBuilder = new SqlConnectionStringBuilder(
+        builder.Configuration.GetConnectionString("DefaultConnection"));
+conStrBuilder.Password = builder.Configuration["DbPassword"];
+var connection = conStrBuilder.ConnectionString;
+
+builder.Services.AddSqlServer<ApiContext>(connection);
 
 var app = builder.Build();
 
