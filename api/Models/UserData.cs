@@ -1,12 +1,19 @@
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Models;
 
 public class UserData
 {
     public List<UserData> userDataList = new List<UserData>();
-    public int Id { get; set; }
+    public int Id { get; set; } // Primary key is always Id in EF Core
+    // [Required] and [MaxLength(x)] go above the property
+    // Marks it as a required attribute
+    [Required]
+    [MaxLength(100)]
     public string? firstName { get; set; }
+    [Required]
+    [MaxLength(100)]
     public string? lastName { get; set; }
     public int phoneNum { get; set; }
 
