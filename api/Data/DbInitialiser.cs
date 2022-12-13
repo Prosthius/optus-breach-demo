@@ -8,7 +8,7 @@ namespace Api.Data
         public static void Initialise(ApiContext context)
         {
 
-            if (context.userData.Any()) return;   // DB has been seeded
+            if (context.users.Any()) return;   // DB has been seeded
 
             var users = new UserData[]
             {
@@ -35,7 +35,7 @@ namespace Api.Data
                 }
             };
 
-            context.userData!.AddRange(users);
+            context.users!.AddRange(users);
             context.SaveChanges();
         }
     }
