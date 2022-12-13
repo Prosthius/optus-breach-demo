@@ -15,13 +15,21 @@ public class ApiService
 
     public IEnumerable<UserData> GetAll()
     {
-        return _context.UserDatas.AsNoTracking().ToList();
+        return _context.userData.AsNoTracking().ToList();
     }
 
     public UserData? GetById(int id)
     {
-        return _context.UserDatas
+        return _context.userData
             .AsNoTracking()
             .SingleOrDefault(userData => userData.Id == id);
+    }
+
+    public UserData Create(UserData newUser)
+    {
+        _context.userData.Add(newUser);
+        _context.SaveChanges();
+
+        return newUser;
     }
 }

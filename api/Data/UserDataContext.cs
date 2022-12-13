@@ -7,5 +7,7 @@ public class ApiContext : DbContext
 {
     public ApiContext(DbContextOptions<ApiContext> options) : base(options){}
 
-    public DbSet<UserData> UserDatas => Set<UserData>();
+    public DbSet<UserData> userData => Set<UserData>();
+
+    // public DbSet<UserData>? UserDatas { get; set; }
 }
