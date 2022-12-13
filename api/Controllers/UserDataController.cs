@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Models;
 using Api.Services;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace api.Controllers;
 
@@ -27,6 +28,8 @@ public class DemoController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(UserData))]
+    [SwaggerResponse(StatusCodes.Status404NotFound, Type = typeof(NotFoundResult))]
     public ActionResult<UserData> Get(int id)
     {
         // try
@@ -41,13 +44,13 @@ public class DemoController : ControllerBase
         // }
         var userData = _service.GetById(id);
 
-        if(userData is not null)
+        if (userData is not null)
         {
-            return userData;
+            return Ok(userData);
         }
         else
         {
-            return NotFound();
+            return NotFound(userData);
         }
     }
 }
