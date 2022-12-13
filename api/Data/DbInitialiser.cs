@@ -14,21 +14,18 @@ namespace Api.Data
             {
                 new UserData
                 {
-                    Id = 0,
                     firstName = "John",
                     lastName = "Smith",
                     phoneNum = 00000000
                 },
                 new UserData
                 {
-                    Id = 1,
                     firstName = "Jane",
                     lastName = "Smith",
                     phoneNum = 11111111
                 },
                 new UserData
                 {
-                    Id = 2,
                     firstName = "Jim",
                     lastName = "Doe",
                     phoneNum = 22222222
