@@ -1,5 +1,5 @@
 using Api.Data;
-using System.Data;
+using Api.Services;
 using System.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +18,8 @@ var connection = conStrBuilder.ConnectionString;
 
 builder.Services.AddSqlServer<ApiContext>(connection);
 
+builder.Services.AddScoped<ApiService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,5 +34,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.CreateDbIfNotExists();
 
 app.Run();
