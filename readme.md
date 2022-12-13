@@ -5,3 +5,6 @@
 - Microsoft.EntityFrameworkCore.Design
 - Microsoft.EntityFrameworkCore.SqlServer
 - System.Data.SqlClient
+
+## To add response descriptions in swagger:
+- dotnet add package Swashbuckle.AspNetCore.Annotations
